@@ -227,7 +227,6 @@ Project files:
 
 - `remove_background.py`: CLI and processing pipeline
 - `tests/`: deterministic tests for masking, trimming, previews, and fallback cleanup
-- `Background Removal Tool Spec.md`: original implementation spec
 
 ## Status
 
