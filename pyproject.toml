@@ -1,0 +1,35 @@
+[project]
+name = "bgrm"
+version = "0.1.0"
+description = "CLI background removal utility for transparent PNG exports."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python-headless>=4.9",
+  "pillow>=10.0",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+ai = [
+  "numba>=0.63",
+  "onnxruntime>=1.17",
+  "rembg>=2.0",
+]
+test = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+bgrm = "remove_background:main"
+
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["remove_background"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
